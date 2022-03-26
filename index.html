@@ -264,18 +264,15 @@
 	  		  <tr>
 	  		  	<td>
 							<div align="justify">
-							Content creation, central to applications such as virtual reality, can be a tedious and time-consuming.
-							Recent image synthesis methods simplify this task by offering tools to generate new views from as little
-							as a single input image, or by converting a semantic map into a photorealistic image. We propose to push
-							the envelope further, and introduce Generative View Synthesis (GVS), which can synthesize multiple photorealistic views
-							of a scene given a single semantic map. We show that the sequential application of existing techniques, e.g., semantics-to-image
-							translation followed by monocular view synthesis, fail at capturing the scene's structure. In contrast, we solve the semantics-to-image
-							translation in concert with the estimation of the 3D layout of the scene, thus producing geometrically consistent novel views that preserve
-							semantic structures. We first lift the input 2D semantic map onto a 3D layered representation of the scene in feature space, thereby preserving
-							the semantic labels of 3D geometric structures. We then project the layered features onto the target views to generate the final novel-view images.
-							We verify the strengths of our method and compare it with several advanced baselines on three different datasets. Our approach also allows for style
-							manipulation and image editing operations, such as the addition or removal of objects, with simple manipulations of the input style images and semantic maps respectively.
-
+							Spherical novel view synthesis (SNVS) is the task of estimating 360$^\circ$
+							views at dynamic novel views given a set of 360 input views. Prior arts learn multi-sphere image (MSI)
+							representations that enables fast rendering times but are only limited to modelling low-dimensional color values. Modelling high-dimensional appearance features in MSI can result
+							in better view synthesis, but it is not feasible to represent high-dimensional
+							features in a large number (64) of MSI spheres. We propose a novel MSI representation called Soft Occlusion MSI (SOMSI) that enables modelling high-dimensional appearance features in MSI
+							while retaining the fast rendering times of a standard MSI. Our key insight is to model appearance features in a smaller set ($3$)
+							of occlusion levels instead of larger number of MSI levels. Experiments on both synthetic and real-world scenes demonstrate that using SOMSI can provide a good balance between accuracy and runtime.
+							SOMSI can produce considerably better results compared to MSI based MatryODSHka, while having similar fast rendering time. SOMSI view synthesis quality is on-par with
+							state-of-the-art NeRF like model while being 2 orders of magnitude faster.
 							</div>
 	  		    </td>
 	  		  </tr>
